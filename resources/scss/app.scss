@@ -1,0 +1,20 @@
+// Base
+@use './base/reset';
+@use './base/typography';
+
+// Components
+@use './components/pagination';
+@use './components/project';
+
+// Pages
+@use './pages/layout';
+@use './pages/projects';
+
+// Vendors
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
