@@ -1,0 +1,31 @@
+@use '../abstracts/variables';
+
+header {
+    background: variables.$color-background-element;
+
+    > div {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: variables.$content-width;
+        padding-top: variables.$spacer-md;
+        padding-left: variables.$spacer-sm;
+        padding-right: variables.$spacer-sm;
+        padding-bottom: variables.$spacer-md;
+
+        @media screen and (min-width: variables.$screen-md) {
+            padding-left: variables.$spacer-md;
+            padding-right: variables.$spacer-md;
+        }
+
+        @media screen and (min-width: variables.$screen-lg) {
+            padding-left: variables.$spacer-lg;
+            padding-right: variables.$spacer-lg;
+        }
+    }
+
+    h2 {
+        font-size: variables.$font-size-lg;
+        font-weight: variables.$font-weight-semibold;
+        line-height: 1.25;
+    }
+}
