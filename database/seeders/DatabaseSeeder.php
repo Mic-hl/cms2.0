@@ -22,6 +22,12 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('123123123'),
         ]);
 
+        User::factory()->withPersonalTeam()->create([
+            'name' => 'Marun',
+            'email' => env('GLOBAL_ADMIN_EMAIL'),
+            'password' => bcrypt('123123123'),
+        ]);
+
         Project::factory()->count(100)->create();
     }
 }

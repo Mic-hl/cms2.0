@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProjectController;
+use App\Http\Middleware\EnsureGlobalAdmin;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -23,5 +24,6 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 
-    Route::resource('/projects',ProjectController::class);
+    Route::resource('/projects',ProjectController::class)
+        ->middleware(EnsureGlobalAdmin::class);
 });

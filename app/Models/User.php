@@ -66,4 +66,9 @@ class User extends Authenticatable implements MustVerifyEmail
             'password' => 'hashed',
         ];
     }
+
+    public function isGlobalAdmin()
+    {
+        return $this->email === env('GLOBAL_ADMIN_EMAIL');
+    }
 }
