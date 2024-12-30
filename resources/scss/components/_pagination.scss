@@ -7,4 +7,24 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    .pagination-link {
+        @include mixins.background(true, variables.$border-radius-sm);
+        align-items: center;
+        aspect-ratio: 1;
+        display: flex;
+        height: variables.$spacer-xl;
+        justify-content: center;
+
+        &.active {
+            @include mixins.background(false, variables.$border-radius-sm);
+            cursor: default;
+        }
+
+        &:first-of-type,
+        &:last-of-type {
+            aspect-ratio: unset;
+            width: calc(variables.$spacer-lg * 3);
+        }
+    }
 }

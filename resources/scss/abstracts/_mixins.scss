@@ -2,9 +2,9 @@
 @use './variables';
 
 // Add Background
-@mixin background($hover: false) {
+@mixin background($hover: false, $border-radius: variables.$border-radius-md) {
     background: variables.$color-background-element;
-    border-radius: variables.$border-radius;
+    border-radius: $border-radius;
 
     @if $hover {
         &:hover {
