@@ -1,6 +1,7 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
-import { Head } from '@inertiajs/vue3';
+import { Head, Link } from '@inertiajs/vue3';
+import NavLink from '@/Components/NavLink.vue';
 import { defineProps } from 'vue';
 
 defineProps(['project']);
@@ -12,6 +13,12 @@ defineProps(['project']);
     <AppLayout>
         <template #header>
             <h2>{{ project.name }}</h2>
+            <NavLink
+                v-if="$page.props.isGlobalAdmin"
+                :href="route('projects.index')"
+            >
+                back to projects
+            </NavLink>
         </template>
 
         <div class="content-wrapper">
