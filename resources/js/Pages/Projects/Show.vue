@@ -16,6 +16,7 @@ defineProps(['project']);
             <NavLink
                 v-if="$page.props.isGlobalAdmin"
                 :href="route('projects.index')"
+                class="projects-link"
             >
                 back to projects
             </NavLink>
