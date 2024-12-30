@@ -280,7 +280,7 @@ const logout = () => {
             </nav>
 
             <!-- Page Heading -->
-            <header v-if="$slots.header" class="shadow">
+            <header v-if="$slots.header" class="shadow panel">
                 <div>
                     <slot name="header" />
                 </div>

@@ -1,6 +1,6 @@
 @use '../abstracts/variables';
 
-header {
+header.panel {
     background: variables.$color-background-element;
 
     > div {
