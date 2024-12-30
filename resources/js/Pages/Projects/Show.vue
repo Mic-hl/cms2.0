@@ -4,6 +4,8 @@ import { Head } from '@inertiajs/vue3';
 import NavLink from '@/Components/NavLink.vue';
 
 defineProps(['project']);
+
+const previousPage = sessionStorage.getItem('projectsPage');
 </script>
 
 <template>
@@ -14,7 +16,7 @@ defineProps(['project']);
             <h2>{{ project.name }}</h2>
             <NavLink
                 v-if="$page.props.isGlobalAdmin"
-                :href="route('projects.index')"
+                :href="route('projects.index', { page: previousPage })"
                 class="projects-link"
             >
                 back to projects

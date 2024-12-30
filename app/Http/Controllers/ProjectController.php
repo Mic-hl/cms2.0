@@ -11,12 +11,15 @@ class ProjectController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $projects = Project::paginate(20);
+        $page = $request->query('page',1);
+
+        $projects = Project::paginate(20)->withQueryString();
 
         return inertia('Projects/Index', [
             'projects' => $projects,
+            'currentPage' => $page
         ]);
     }
 
@@ -50,8 +53,10 @@ class ProjectController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Project $project)
+    public function show(Project $project, Request $request)
     {
+        $previousPage = $request->query('page',1);
+
         return inertia('Projects/Show', [
             'project' => $project,
         ]);

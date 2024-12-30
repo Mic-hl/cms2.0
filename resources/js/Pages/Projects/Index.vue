@@ -2,8 +2,14 @@
 import AppLayout from '@/Layouts/AppLayout.vue';
 import Project from '@/Components/Project.vue';
 import { Head, Link } from '@inertiajs/vue3';
+import { ref } from 'vue';
 
-defineProps(['projects']);
+const props = defineProps(['projects']);
+const currentPage = ref(props.projects?.current_page || 1);
+
+const saveCurrentPage = () => {
+    sessionStorage.setItem('projectsPage', currentPage.value);
+};
 </script>
 
 <template>
@@ -20,6 +26,7 @@ defineProps(['projects']);
                     <Link
                         :href="`projects/${project.id}`"
                         class="project-link"
+                        @click="saveCurrentPage"
                     >
                         <Project
                             :name="project.name"
