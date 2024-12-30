@@ -44,4 +44,9 @@
 .project-settings {
     display: flex;
     gap: variables.$spacer-lg;
+    margin-top: variables.$spacer-md;
+
+    @media screen and (min-width: variables.$screen-lg) {
+        margin-top: variables.$spacer-lg;
+    }
 }
