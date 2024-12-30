@@ -40,3 +40,8 @@
         margin-top: variables.$spacer-lg;
     }
 }
+
+.project-settings {
+    display: flex;
+    gap: variables.$spacer-lg;
+}

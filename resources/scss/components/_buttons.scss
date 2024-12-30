@@ -1,0 +1,10 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.button-secondary {
+    @include mixins.button();
+}
+
+.button-danger {
+    @include mixins.button(variables.$color-button-danger);
+}

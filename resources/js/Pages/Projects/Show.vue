@@ -39,6 +39,10 @@ const previousPage = sessionStorage.getItem('projectsPage');
                 <div v-if="project.description" class="project-description">
                     {{ project.description }}
                 </div>
+                <div class="project-settings">
+                    <button class="button-secondary">edit</button>
+                    <button class="button-danger">delete</button>
+                </div>
             </div>
         </div>
     </AppLayout>
