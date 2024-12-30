@@ -1,6 +1,7 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
 import Project from '@/Components/Project.vue';
+import NavLink from '@/Components/NavLink.vue';
 import { Head, Link } from '@inertiajs/vue3';
 import { ref } from 'vue';
 
@@ -18,6 +19,14 @@ const saveCurrentPage = () => {
     <AppLayout title="Projects">
         <template #header>
             <h2>Projects</h2>
+            <NavLink
+                v-if="$page.props.isGlobalAdmin"
+                :href="route('projects.create')"
+                class="projects-link"
+                @click="saveCurrentPage"
+            >
+                add project
+            </NavLink>
         </template>
 
         <div class="content-wrapper">
