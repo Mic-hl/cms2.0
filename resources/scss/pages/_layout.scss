@@ -1,9 +1,20 @@
 @use '../abstracts/variables';
 
+.layout-wrapper {
+    background: variables.$color-background-page;
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+}
+
+main {
+    height: 100%;
+}
+
 .content-wrapper,
 .pagination {
-    padding-bottom: variables.$spacer-xl;
-    padding-top: variables.$spacer-xl;
+    padding-bottom: variables.$spacer-lg;
+    padding-top: variables.$spacer-lg;
 
     margin-left: auto;
     margin-right: auto;

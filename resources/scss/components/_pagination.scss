@@ -26,5 +26,11 @@
             aspect-ratio: unset;
             width: calc(variables.$spacer-lg * 3);
         }
+        
+        @media screen and (max-width: variables.$screen-md) {
+            &:not(:first-of-type):not(:last-of-type) {
+                display: none;
+            }
+        }
     }
 }
