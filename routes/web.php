@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\RouteController;
+use App\Http\Controllers\UserController;
 use App\Http\Middleware\EnsureGlobalAdmin;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -23,6 +25,8 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+
+    Route::post('/user/profile/update-theme', [UserController::class, 'updateTheme'])->name('user.update-theme');
 
     Route::resource('/projects',ProjectController::class)
         ->middleware(EnsureGlobalAdmin::class);
