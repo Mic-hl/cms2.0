@@ -1,13 +1,40 @@
+// CSS Variables
+:root {
+    --color-background-element: #4b5563;
+    --color-background-element-hover: #3b434e;
+    --color-background-page: #e5e7eb;
+    --color-button: #5c4c10;
+    --color-danger: #620f0f;
+    --color-text-link: #3b82f6;
+    --color-text-primary: #111827;
+    --color-text-secondary: #1f2937;
+}
+
+// Dark theme
+[data-theme='dark'] {
+    --color-background-element: #1f2937;
+    --color-background-element-hover: #18202b;
+    --color-background-page: #111827;
+    --color-button: #5c4c10;
+    --color-danger: #620f0f;
+    --color-text-link: #3b82f6;
+    --color-text-primary: #e5e7eb;
+    --color-text-secondary: #4b5563;
+}
+
+
+// Sass Variables
 // Colors
-$color-text-primary: #e5e7eb;
-$color-text-secondary: #4b5563;
-$color-text-link: #3b82f6;
+$color-text-primary: var(--color-text-primary);
+$color-text-secondary: var(--color-text-secondary);
+$color-text-link: var(--color-text-link);
 
-$color-background-element: #1f2937;
-$color-background-page: #111827;
+$color-background-element: var(--color-background-element);
+$color-background-element-hover: var(--color-background-element-hover);
+$color-background-page: var(--color-background-page);
 
-$color-button-secondary: #5c4c10;
-$color-button-danger: #620f0f;
+$color-button-secondary: var(--color-button);
+$color-button-danger: var(--color-danger);
 
 // Fonts
 $font-family: Figtree, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
