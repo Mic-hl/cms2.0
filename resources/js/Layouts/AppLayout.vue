@@ -7,10 +7,13 @@ import Dropdown from '@/Components/Dropdown.vue';
 import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
+import { usePage } from '@inertiajs/vue3';
 
 defineProps({
     title: String,
 });
+
+const { profile } = usePage().props;
 
 const showingNavigationDropdown = ref(false);
 
@@ -28,7 +31,7 @@ const logout = () => {
 </script>
 
 <template>
-    <div>
+    <div :class="`${profile.user.theme}-theme`">
         <Head :title="title" />
 
         <Banner />
@@ -52,7 +55,7 @@ const logout = () => {
                                     Dashboard
                                 </NavLink>
                                 <NavLink
-                                    v-if="$page.props.isGlobalAdmin"
+                                    v-if="$page.props.profile.user.isGlobalAdmin"
                                     :href="route('projects.index')"
                                     :active="route().current('projects.index')"
                                 >

@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Marun',
             'email' => env('GLOBAL_ADMIN_EMAIL'),
             'password' => bcrypt('123123123'),
+            'theme' => 'dark',
         ]);
 
         Project::factory()->count(100)->create();

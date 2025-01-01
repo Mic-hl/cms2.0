@@ -35,7 +35,15 @@ class HandleInertiaRequests extends Middleware
                 ...(new Ziggy)->toArray(),
                 'location' => $request->url(),
             ],
-            'isGlobalAdmin' => auth()->check() ? auth()->user()->isGlobalAdmin() : false,
+            'profile' => [
+                'user' => auth()->user() ? [
+                    'id' => auth()->user()->id,
+                    'name' => auth()->user()->name,
+                    'email' => auth()->user()->email,
+                    'theme' => auth()->user()->theme,
+                    'isGlobalAdmin' => auth()->check() ? auth()->user()->isGlobalAdmin() : false
+                ] : null,
+            ],
         ]);
     }
 }
