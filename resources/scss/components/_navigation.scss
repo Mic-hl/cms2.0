@@ -1,5 +1,22 @@
 @use '../abstracts/variables';
 
+nav {
+    background: variables.$color-background-element;
+
+    a.active {
+        border-color: variables.$color-text-link;
+        color: variables.$color-text-primary;
+    }
+
+    a.inactive {
+        color: variables.$color-text-secondary;
+
+        &:hover {
+            color: variables.$color-text-primary;
+        }
+    }
+}
+
 .projects-link {
     padding: 0 !important;
 }

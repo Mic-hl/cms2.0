@@ -1,17 +1,17 @@
 // CSS Variables
-:root {
-    --color-background-element: #4b5563;
-    --color-background-element-hover: #3b434e;
-    --color-background-page: #e5e7eb;
+.light-theme {
+    --color-background-element: #ffffff;
+    --color-background-element-hover: #cfcfcf;
+    --color-background-page: #f3f4f6;
     --color-button: #5c4c10;
-    --color-danger: #620f0f;
-    --color-text-link: #3b82f6;
-    --color-text-primary: #111827;
-    --color-text-secondary: #1f2937;
+    --color-danger: #dc2626;
+    --color-text-link: #818cf8;
+    --color-text-primary: #1f2937;
+    --color-text-secondary: #6b7280;
 }
 
 // Dark theme
-[data-theme='dark'] {
+.dark-theme {
     --color-background-element: #1f2937;
     --color-background-element-hover: #18202b;
     --color-background-page: #111827;

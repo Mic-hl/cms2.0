@@ -26,6 +26,7 @@ header.panel {
     }
 
     h2 {
+        color: variables.$color-text-primary;
         font-size: variables.$font-size-lg;
         font-weight: variables.$font-weight-semibold;
         line-height: 1.25;
