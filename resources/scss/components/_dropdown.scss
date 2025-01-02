@@ -1,0 +1,31 @@
+@use '../abstracts/variables';
+
+.dropdown-overlay > div {
+    background: variables.$color-background-element;
+    color: variables.$color-text-secondary;
+
+    a {
+        color: variables.$color-text-primary;
+    }
+}
+
+.button-teams,
+.button-settings {
+    color: variables.$color-text-secondary;
+
+    &:hover {
+        color: variables.$color-text-primary;
+    }
+
+    &:active,
+    &:focus {
+        background: variables.$color-background-element-active;
+        color: variables.$color-text-primary;
+    }
+}
+
+.dropdown-link {
+    &:hover {
+        background: variables.$color-text-link;
+    }
+}

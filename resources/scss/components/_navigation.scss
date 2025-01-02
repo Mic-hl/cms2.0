@@ -17,21 +17,6 @@ nav {
     }
 }
 
-.button-teams,
-.button-settings {
-    background: variables.$color-background-element;
-    color: variables.$color-text-secondary;
-
-    &:hover {
-        color: variables.$color-text-primary;
-    }
-
-    &:active,
-    &:focus {
-        background: variables.$color-background-element-active;
-    }
-}
-
 .projects-link {
     padding: 0 !important;
 }
