@@ -15,7 +15,6 @@ const projectsPage = sessionStorage.getItem('projectsPage');
         <template #header>
             <h2>{{ project.name }}</h2>
             <NavLink
-                v-if="$page.props.isGlobalAdmin"
                 :href="route('projects.index', { page: projectsPage })"
                 class="projects-link"
             >

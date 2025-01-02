@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 import { Head, Link, router } from '@inertiajs/vue3';
 import ApplicationMark from '@/Components/ApplicationMark.vue';
 import Banner from '@/Components/Banner.vue';
@@ -8,6 +8,7 @@ import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import { usePage } from '@inertiajs/vue3';
+import { theme } from '@/eventbus';
 
 defineProps({
     title: String,
@@ -16,6 +17,11 @@ defineProps({
 const { profile } = usePage().props;
 
 const showingNavigationDropdown = ref(false);
+
+const currentTheme = ref(profile.user.theme || 'light');
+watch(theme, (newTheme) => {
+    currentTheme.value = newTheme;
+});
 
 const switchToTeam = (team) => {
     router.put(route('current-team.update'), {
@@ -31,7 +37,7 @@ const logout = () => {
 </script>
 
 <template>
-    <div :class="`${profile.user.theme}-theme`">
+    <div :class="`${currentTheme}-theme`">
         <Head :title="title" />
 
         <Banner />
