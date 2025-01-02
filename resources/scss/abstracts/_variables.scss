@@ -1,6 +1,7 @@
 // CSS Variables
 .light-theme {
     --color-background-element: #ffffff;
+    --color-background-element-active: #f9fafb;
     --color-background-element-hover: #cfcfcf;
     --color-background-page: #f3f4f6;
     --color-button: #5c4c10;
@@ -13,6 +14,7 @@
 // Dark theme
 .dark-theme {
     --color-background-element: #1f2937;
+    --color-background-element-active: #374151;
     --color-background-element-hover: #18202b;
     --color-background-page: #111827;
     --color-button: #5c4c10;
@@ -30,6 +32,7 @@ $color-text-secondary: var(--color-text-secondary);
 $color-text-link: var(--color-text-link);
 
 $color-background-element: var(--color-background-element);
+$color-background-element-active: var(--color-background-element-active);
 $color-background-element-hover: var(--color-background-element-hover);
 $color-background-page: var(--color-background-page);
 
