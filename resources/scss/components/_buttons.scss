@@ -8,3 +8,12 @@
 .button-danger {
     @include mixins.button(variables.$color-button-danger);
 }
+
+.logout-button > button {
+    color: variables.$color-button-danger;
+
+    &:hover {
+        background: variables.$color-button-danger;
+        color: variables.$color-text-primary;
+    }
+}
