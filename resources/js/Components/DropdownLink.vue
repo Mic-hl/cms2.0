@@ -17,7 +17,7 @@ defineProps({
             <slot />
         </a>
 
-        <Link v-else :href="href" class="dropdown-link block px-4 py-2 text-sm leading-5 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out">
+        <Link v-else :href="href" class="dropdown-link block px-4 py-2 text-sm leading-5 focus:outline-none transition duration-150 ease-in-out">
             <slot />
         </Link>
     </div>

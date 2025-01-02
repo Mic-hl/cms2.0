@@ -25,7 +25,8 @@
 }
 
 .dropdown-link {
-    &:hover {
+    &:hover,
+    &:focus {
         background: variables.$color-text-link;
     }
 }
