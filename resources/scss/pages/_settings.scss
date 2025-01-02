@@ -1,0 +1,28 @@
+@use '../abstracts/variables';
+
+.form-section,
+.action-section {
+    color: variables.$color-text-primary;
+    
+    .description {
+        color: variables.$color-text-secondary;
+    }
+}
+
+.form-section form {
+    background: variables.$color-background-element;
+
+    input,
+    select {
+        background: variables.$color-background-page;
+        color: variables.$color-text-primary;
+
+        &:focus {
+            border-color: variables.$color-text-link;
+        }
+    }
+}
+
+.action-section .action-display {
+    background: variables.$color-background-element;
+}

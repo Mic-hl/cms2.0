@@ -6,7 +6,6 @@
 // Components
 @use './components/buttons';
 @use './components/dropdown';
-@use './components/forms';
 @use './components/header';
 @use './components/navigation';
 @use './components/pagination';
@@ -15,6 +14,7 @@
 // Pages
 @use './pages/layout';
 @use './pages/projects';
+@use './pages/settings';
 
 // Vendors
 @tailwind base;

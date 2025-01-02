@@ -31,4 +31,8 @@ header.panel {
         font-weight: variables.$font-weight-semibold;
         line-height: 1.25;
     }
+
+    a {
+        color: variables.$color-text-secondary;
+    }
 }
