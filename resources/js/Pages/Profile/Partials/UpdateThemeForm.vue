@@ -47,7 +47,7 @@ const updateTheme = () => {
                 <select
                     id="theme"
                     v-model="form.theme"
-                    class="mt-1 block w-full rounded-md shadow-sm border-gray-300 focus:ring focus:ring-opacity-50"
+                    class="mt-1 block w-full rounded-md shadow-sm"
                 >
                     <option
                         v-for="theme in availableThemes"
