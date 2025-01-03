@@ -60,13 +60,6 @@ const logout = () => {
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </NavLink>
-                                <NavLink
-                                    v-if="$page.props.profile.user.isGlobalAdmin"
-                                    :href="route('projects.index')"
-                                    :active="route().current('projects.index')"
-                                >
-                                    Projects
-                                </NavLink>
                             </div>
                         </div>
 
@@ -209,9 +202,6 @@ const logout = () => {
                     <div class="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                             Dashboard
-                        </ResponsiveNavLink>
-                        <ResponsiveNavLink :href="route('projects.index')" :active="route().current('projects.index')">
-                            Projects
                         </ResponsiveNavLink>
                     </div>
 

@@ -14,12 +14,6 @@ const projectsPage = sessionStorage.getItem('projectsPage');
     <AppLayout>
         <template #header>
             <h2>{{ project.name }}</h2>
-            <NavLink
-                :href="route('projects.index', { page: projectsPage })"
-                class="projects-link"
-            >
-                back to projects
-            </NavLink>
         </template>
 
         <div class="content-wrapper">
