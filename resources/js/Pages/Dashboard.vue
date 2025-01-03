@@ -16,7 +16,6 @@ import ProjectsOverview from '@/Components/ProjectsOverview.vue';
                     <ProjectsOverview
                         v-if="$page.props.profile.user.isGlobalAdmin"
                     />
-                    <Welcome />
                 </div>
             </div>
         </div>
