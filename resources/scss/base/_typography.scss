@@ -6,6 +6,7 @@ body {
 }
 
 p,
-small {
+small,
+a {
     color: variables.$color-text-secondary;
 }

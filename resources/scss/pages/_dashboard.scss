@@ -1,0 +1,64 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.dashboard-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: variables.$spacer-md;
+
+    > * {
+        @include mixins.background();
+        color: variables.$color-text-primary;
+    }
+
+    .projects-overview {
+        display: flex;
+        flex-direction: column;
+        gap: variables.$spacer-sm;
+        grid-template-areas:
+            "number header"
+            "overview create";
+        padding: variables.$spacer-md;
+
+        h3 {
+            align-items: center;
+            display: flex;
+            font-size: variables.$font-size-xxl;
+            grid-area: header;
+            justify-content: center;
+        }
+
+        .projects-number {
+            align-items: center;
+            display: flex;
+            font-size: variables.$font-size-xxl;
+            grid-area: number;
+            justify-content: center;
+            width: 100%;
+        }
+
+        a {
+            @include mixins.background(true);
+            align-items: center;
+            border-width: 1px;
+            border-color: variables.$color-background-element-hover;
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            justify-content: center;
+                padding: variables.$spacer-sm;
+        }
+
+        .projects-link {
+            grid-area: overview;
+        }
+
+        .project-create-link {
+            grid-area: create;
+        }
+
+        @media screen and (min-width: variables.$screen-md) {
+            display: grid;
+        }
+    }
+}
