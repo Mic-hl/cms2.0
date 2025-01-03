@@ -5,8 +5,14 @@ body {
     font-family: variables.$font-family;
 }
 
-p,
-small,
+h1,
+h2,
+h3,
 a {
+    color: variables.$color-text-primary;
+}
+
+p,
+small {
     color: variables.$color-text-secondary;
 }
