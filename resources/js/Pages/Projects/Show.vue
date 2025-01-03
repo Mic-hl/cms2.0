@@ -1,7 +1,6 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
-import { Head } from '@inertiajs/vue3';
-import NavLink from '@/Components/NavLink.vue';
+import { Head, Link } from '@inertiajs/vue3';
 
 defineProps(['project']);
 
@@ -14,6 +13,12 @@ const projectsPage = sessionStorage.getItem('projectsPage');
     <AppLayout>
         <template #header>
             <h2>{{ project.name }}</h2>
+            <Link
+                :href="route('projects.index', { page: projectsPage })"
+                class="projects-link"
+            >
+                back to projects
+            </Link>
         </template>
 
         <div class="content-wrapper">
