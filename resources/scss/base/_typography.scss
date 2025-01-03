@@ -1,11 +1,17 @@
 @use '../abstracts/variables';
 
-body {
+body,
+h2 {
     color: variables.$color-text-primary;
     font-family: variables.$font-family;
 }
 
 p,
-small {
+small,
+span {
     color: variables.$color-text-secondary;
+}
+
+div {
+    color: inherit;
 }
